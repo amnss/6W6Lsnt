@@ -1,32 +1,12 @@
-# Prerequisites
-*.d
 
-# Compiled Object files
-*.slo
-*.lo
-*.o
-*.obj
 
-# Precompiled Headers
-*.gch
-*.pch
-
-# Compiled Dynamic libraries
-*.so
-*.dylib
-*.dll
-
-# Fortran module files
-*.mod
-*.smod
-
-# Compiled Static libraries
-*.lai
-*.la
-*.a
-*.lib
-
-# Executables
-*.exe
-*.out
-*.app
+#include <time.h>
+#include <iostream>
+using namespace std;
+int main()
+{
+    int i=0;
+    clock_t s;
+    for(s=clock();(clock()-s)/CLOCKS_PER_SEC!=1;i++)
+        cout<<i<<endl;
+}
